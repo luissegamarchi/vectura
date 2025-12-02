@@ -133,8 +133,6 @@ def tela_1():
     st.divider()
 
     # ---- Sidebar ----
-    st.sidebar.subheader("🚚 Locais de Origem/Destino") # Título do Sidebar
-
     origens = [None] + list(st.session_state["enderecos"]["Origem"].keys())
     destinos = [None] + list(st.session_state["enderecos"]["Destino"].keys())
     recargas = [None] + list(st.session_state["enderecos"]["Recarga"].keys())
@@ -145,6 +143,8 @@ def tela_1():
 
     st.sidebar.divider()
 
+    st.sidebar.subheader("🚚 Locais de Origem/Destino") # Título do Sidebar
+    
     origem = st.sidebar.selectbox(label="Origem:", options=origens, format_func=lambda x: "Selecione..." if x is None else x, placeholder="Selecione uma das opções.") # Selectbox para endereço de saída do caminhão
     if origem == None:
       pass
@@ -640,3 +640,4 @@ def tela_3():
       else:
 
         st.info("Nenhuma consulta foi fixada ainda.")
+
