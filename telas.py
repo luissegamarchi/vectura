@@ -236,7 +236,7 @@ def tela_1():
           ).add_to(mapa)
 
       if segundo_destino is not None:
-         dados = extrai_coord(segundo_destino, api_key)
+         dados = extrai_coord(segundo_destino, st.secrets['chave'])
          folium.Marker(
               location=[dados[1][0], dados[1][1]],
               popup=f"Segundo Destino: {segundo_destino}",
@@ -640,4 +640,5 @@ def tela_3():
       else:
 
         st.info("Nenhuma consulta foi fixada ainda.")
+
 
