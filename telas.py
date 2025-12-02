@@ -238,7 +238,7 @@ def tela_1():
       if segundo_destino is not None:
         dados = st.session_state["enderecos"]["Destino"][segundo_destino]
         folium.Marker(
-              location=[dados[1][0], dados[1][1]],
+              location=[dados["latitude"], dados["longitude"]],
               popup=f"Segundo Destino: {segundo_destino}",
               icon=folium.Icon(color="orange")
           ).add_to(mapa)
@@ -640,6 +640,7 @@ def tela_3():
       else:
 
         st.info("Nenhuma consulta foi fixada ainda.")
+
 
 
 
