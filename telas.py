@@ -237,6 +237,7 @@ def tela_1():
 
       if segundo_destino is not None:
          dados = extrai_coord(segundo_destino, st.secrets['chave'])
+         st.sidebar.write(dados)
          folium.Marker(
               location=[dados[1][0], dados[1][1]],
               popup=f"Segundo Destino: {segundo_destino}",
@@ -640,5 +641,6 @@ def tela_3():
       else:
 
         st.info("Nenhuma consulta foi fixada ainda.")
+
 
 
