@@ -1,7 +1,7 @@
 import streamlit as st
 from utils import carregar_enderecos, carregar_historico, carregar_fixos
 from PIL import Image
-from telas.telas import tela_0, tela_1, tela_2, tela_3
+from telas import tela_0, tela_1, tela_2, tela_3
 
 def main():
 
@@ -59,4 +59,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
