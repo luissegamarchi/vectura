@@ -236,7 +236,7 @@ def tela_1():
           ).add_to(mapa)
 
       if segundo_destino is not None:
-         dados = extrai_coord(segundo_destino)
+         dados = extrai_coord(segundo_destino, api_key)
          folium.Marker(
               location=[dados[1][0], dados[1][1]],
               popup=f"Segundo Destino: {segundo_destino}",
@@ -432,11 +432,12 @@ def tela_2():
 
         nome_salvar = col1.text_input("Salvar como:", placeholder = "Insira o nome desejado para salvar o endereço.") # Text input para o nome que o endereço será salvo
         endereco_salvar = col1.text_input("Endereço:", placeholder = "Insira o endereço.") # Text input para o endereço em si
+        api_key = col1.text_input("Chave:", placeholder="Insira a chave")
 
         botao_salvar_endereco = col1.button("Salvar Endereço") # Cria um botão para salvar o endereço.
 
         if botao_salvar_endereco == True: # Se a seleção feita acima for "Saída", procurar na lista de endereços de Saída. Se não tiver o endereço, salvar com o nome inputado.
-            sucesso, mensagem = salvar_enderecos(tipo, nome_salvar, endereco_salvar, st.session_state["enderecos"])
+            sucesso, mensagem = salvar_enderecos(tipo, nome_salvar, endereco_salvar, st.session_state["enderecos"], api_key)
 
             # Caso as entradas passem pelas validações da função salvar_enderecos, solta uma mensagem de sucesso e carrega os enderecos
 
