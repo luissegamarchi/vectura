@@ -139,6 +139,12 @@ def tela_1():
     destinos = [None] + list(st.session_state["enderecos"]["Destino"].keys())
     recargas = [None] + list(st.session_state["enderecos"]["Recarga"].keys())
 
+    st.sidebar.subheader("⚙️ Chave API")
+
+    api_key = st.sidebar.text_input("Insira a chave de API")
+
+    st.sidebar.divider()
+
     origem = st.sidebar.selectbox(label="Origem:", options=origens, format_func=lambda x: "Selecione..." if x is None else x, placeholder="Selecione uma das opções.") # Selectbox para endereço de saída do caminhão
     if origem == None:
       pass
@@ -175,12 +181,6 @@ def tela_1():
     else:
        endereco_segundo = st.session_state["enderecos"]["Destino"][segundo_destino]["endereco_formatado"]
        st.sidebar.write(endereco_segundo)
-
-    st.sidebar.divider()
-
-    st.sidebar.subheader("⚙️ Chave API")
-
-    api_key = st.sidebar.text_input("Insira a chave de API")
 
     st.sidebar.divider()
 
@@ -638,4 +638,5 @@ def tela_3():
 
         st.dataframe(df_fixos)
       else:
+
         st.info("Nenhuma consulta foi fixada ainda.")
