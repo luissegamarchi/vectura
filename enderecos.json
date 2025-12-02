@@ -1,0 +1,36 @@
+{
+    "Origem": {
+        "Mineradora Areia Nova": {
+            "endereco_formatado": "Rod. Pres. Castello Branco, 12156 - Bofete, SP, Brazil",
+            "latitude": -23.1678919,
+            "longitude": -48.3342713,
+            "cep": "18590-000",
+            "data_cadastro": "26/11/2025 10:21:11"
+        }
+    },
+    "Destino": {
+        "Praia Azul - Ameircana": {
+            "endereco_formatado": "R. Albano Ferreira Jorge, 55 - Monte Carlo, Americana - SP, Brazil",
+            "latitude": -22.7347803,
+            "longitude": -47.2360397,
+            "cep": "13476-713",
+            "data_cadastro": "26/11/2025 08:33:31"
+        },
+        "Supermix Itaquaquecetuba": {
+            "endereco_formatado": "Av. Antônio Fuga, 93 - Jardim Aracare, Itaquaquecetuba - SP, Brazil",
+            "latitude": -23.503271,
+            "longitude": -46.347008,
+            "cep": "08572-730",
+            "data_cadastro": "26/11/2025 08:36:04"
+        }
+    },
+    "Recarga": {
+        "Mogi das Cruzes": {
+            "endereco_formatado": "Jundiapeba, Mogi das Cruzes - State of São Paulo, Brazil",
+            "latitude": -23.5423872,
+            "longitude": -46.2614707,
+            "cep": "08750-530",
+            "data_cadastro": "26/11/2025 08:32:37"
+        }
+    }
+}
