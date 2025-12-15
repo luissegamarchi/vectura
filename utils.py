@@ -130,16 +130,14 @@ def extrair_cep(texto):
 def formata_endereco(endereco):
 
     cep = extrair_cep(endereco)
-
+    resultado_separado = endereco.split(", ")
+    
     if cep:
-        resultado_separado = endereco.split(", ")
         resultado_separado.remove(cep)
-        endereço_formatado = ", ".join(resultado_separado)
+        
+    endereço_formatado = ", ".join(resultado_separado)
 
-        return endereço_formatado, cep
-
-    else:
-        return endereco
+    return endereço_formatado, cep
 
 
 # Função para carregar dados já salvos
@@ -694,4 +692,5 @@ def mock_from_file():
 #     response = requests.post(url=url, json=data, headers=headers)
 
 #     return response.json()
+
 
