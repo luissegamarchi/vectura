@@ -131,9 +131,10 @@ def formata_endereco(endereco):
 
     cep = extrair_cep(endereco)
 
-    resultado_separado = endereco.split(", ")
-    resultado_separado.remove(cep)
-    endereço_formatado = ", ".join(resultado_separado)
+    if cep:
+        resultado_separado = endereco.split(", ")
+        resultado_separado.remove(cep)
+        endereço_formatado = ", ".join(resultado_separado)
 
     return endereço_formatado, cep
 
@@ -688,4 +689,5 @@ def mock_from_file():
 #     }
 
 #     response = requests.post(url=url, json=data, headers=headers)
+
 #     return response.json()
